@@ -1,0 +1,3 @@
+C:\Program Files\Maxon ZBrush 2025\ZStartup\ZPlugs64\ZDepthData\capture_depth.tif
+C:\Program Files\Maxon ZBrush 2025\ZStartup\ZPlugs64\ZDepthData\capture_cavity.tif
+C:\Program Files\Maxon ZBrush 2025\ZStartup\ZPlugs64\ZDepthData\capture_curvature.tif

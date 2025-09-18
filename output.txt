@@ -1,0 +1,3 @@
+C:\Users\Dat\IdeaProjects\Covert-IMG\capture_depth.psd
+C:\Users\Dat\IdeaProjects\Covert-IMG\capture_cavity.psd
+C:\Users\Dat\IdeaProjects\Covert-IMG\capture_curvature.psd
