@@ -1,30 +1,25 @@
 package org.dat;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 public class TiffToPsdConverter {
-    public static void main(String[] args) {
-        String inputFilePath = "depth_output.tif";
-        String outputFilePath = "depth_output.psd";
-
+    public static boolean convert(String tifPath, String psdPath) {
         try {
-            // Đọc file TIFF
-            // TwelveMonkeys plugin sẽ tự động được sử dụng
-            BufferedImage image = ImageIO.read(new File(inputFilePath));
-
-            if (image != null) {
-                // Ghi file dưới định dạng PSD
-                // TwelveMonkeys plugin sẽ được sử dụng để ghi
-                ImageIO.write(image, "psd", new File(outputFilePath));
-                System.out.println("Chuyển đổi thành công!");
-            } else {
-                System.out.println("Không thể đọc file TIFF.");
+            BufferedImage img = ImageIO.read(new File(tifPath));
+            if (img == null) {
+                System.err.println("[ERROR] Không đọc được file: " + tifPath);
+                return false;
             }
+            ImageIO.write(img, "psd", new File(psdPath));
+            System.out.println("[SUCCESS] Đã lưu: " + psdPath);
+            return true;
         } catch (IOException e) {
-            System.out.println("Lỗi trong quá trình chuyển đổi: " + e.getMessage());
+            System.err.println("[ERROR] Chuyển đổi thất bại: " + tifPath);
             e.printStackTrace();
+            return false;
         }
     }
 }
