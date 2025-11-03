@@ -35,7 +35,7 @@ public class Main {
 
         // Files đặt cạnh JAR khi deploy
         Path inputList   = baseJar.resolve("output_tif.txt");
-        Path licenseFile = baseJar.resolve("Act").resolve("license.txt");
+        Path licenseFile = baseJar.resolve("license.txt");
 
         // ===== 1) Kiểm tra license =====
         if (!Files.exists(licenseFile)) {
